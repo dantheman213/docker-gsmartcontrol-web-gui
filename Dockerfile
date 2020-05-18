@@ -1,7 +1,7 @@
 FROM jlesage/baseimage-gui:ubuntu-18.04
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV APP_NAME="GSmartControl"
+ENV APP_NAME="smart-disk-check-suite"
 
 RUN apt-get update && \
     apt-get -y install -qq --force-yes cron && \
