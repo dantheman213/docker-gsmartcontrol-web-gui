@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# Finds all physical disks on the machine and runs a short or long disk check using smartctl.
+
 if [ "$#" -ne 1 ]; then
     echo "Error: one argument needed."
     echo "Usage: ./check-disks.sh <short|long>"

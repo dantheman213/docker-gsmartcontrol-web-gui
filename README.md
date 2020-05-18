@@ -2,6 +2,13 @@
 
 GSmartControl and S.M.A.R.T. disk checks in a Docker container targeted for headless Linux server
 
+## Features
+
+* `GSmartControl` GUI app running headless with VNC
+* Script utilizing `smartmontools` will check all physical disks
+  - Short test runs every day
+  - Long test runs every month
+
 ## Getting Started
 
 ```
@@ -17,6 +24,8 @@ docker run \
     --restart unless-stopped \
     dantheman213/smart-disk-check-suite:latest
 ```
+
+### Visit Website
 
 http://localhost:36800/
 
