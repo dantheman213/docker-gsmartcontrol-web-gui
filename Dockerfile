@@ -4,6 +4,9 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV APP_NAME="GSmartControl"
 
 RUN apt-get update && \
-    apt-get install -y gsmartcontrol
+    apt-get -y install -qq --force-yes cron && \
+    apt-get install -y smartmontools gsmartcontrol
 
-COPY startapp.sh /startapp.sh
+COPY rootfs/usr/bin/check-disks.sh /usr/bin/check-disks.sh
+COPY rootfs/usr/bin/startapp.sh /startapp.sh
+COPY rootfs/var/spool/cron/crontabs/root /var/spool/cron/crontabs/root

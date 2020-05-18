@@ -1,0 +1,8 @@
+# Quick test on all disks / Run day at 1:05a local server time
+5 1 * * * /usr/bin/check-disks.sh short >> /var/log/diskcheck.log
+
+# Long extended test / Run every month on 1st at 12:05a local server time
+5 12 1 * * /usr/bin/check-disks.sh long >> /var/log/diskcheck.log
+
+# Ensure log doesn't get too big / Run every month on 1st at 12:01a local server time
+1 12 1 * * tail -n 10000 /var/log/diskcheck.log > /var/log/diskcheck.log
