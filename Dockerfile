@@ -10,7 +10,9 @@ COPY rootfs/usr/bin/check-disks.sh /usr/bin/check-disks.sh
 COPY rootfs/usr/bin/startapp.sh /startapp.sh
 COPY rootfs/var/spool/cron/crontabs/root /var/spool/cron/crontabs/root
 
-RUN chmod +x /usr/bin/check-disks.sh && \
-    touch /etc/crontab /etc/cron.*/*
+RUN mv /init /init.app
+COPY rootfs/init /init
 
-RUN update-rc.d cron enable
+RUN chmod +x /usr/bin/check-disks.sh && \
+    chmod +x /init  && \
+    touch /etc/crontab /etc/cron.*/*

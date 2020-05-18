@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+echo "Starting Cron..."
+service cron start
+
+echo "Starting App, X11, and VNC..."
+/init.app
