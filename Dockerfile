@@ -10,3 +10,5 @@ RUN apt-get update && \
 COPY rootfs/usr/bin/check-disks.sh /usr/bin/check-disks.sh
 COPY rootfs/usr/bin/startapp.sh /startapp.sh
 COPY rootfs/var/spool/cron/crontabs/root /var/spool/cron/crontabs/root
+
+RUN chmod +x /usr/bin/check-disks.sh
