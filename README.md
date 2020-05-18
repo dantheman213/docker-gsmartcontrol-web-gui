@@ -1,6 +1,6 @@
 # smart-disk-check-suite
 
-GSmartControl and S.M.A.R.T. disk checks in a Docker container targeted for headless Linux server
+GSmartControl and automated S.M.A.R.T. disk checks in a Docker container targeted for headless Linux server.
 
 ## Features
 
