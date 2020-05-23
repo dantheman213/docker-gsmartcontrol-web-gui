@@ -1,4 +1,4 @@
-# docker-headless-gsmartcontrol
+# gsmartcontrol-headless
 
 GSmartControl in a Docker container targeted for headless Linux server.
 
