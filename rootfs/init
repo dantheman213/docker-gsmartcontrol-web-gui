@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-# TODO: run check-disks.sh on a schedule
-
-echo "Starting App, X11, and VNC..."
-/init.app
