@@ -1,4 +1,4 @@
-# smart-disk-check-suite
+# docker-headless-gsmartcontrol
 
 GSmartControl in a Docker container targeted for headless Linux server.
 
